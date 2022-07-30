@@ -1,7 +1,10 @@
-import express, { Router } from "express";
+import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
 import route from "./routes/index.js";
 import connectDB from "./database/index.js";
+
+dotenv.config();
 
 //Connect to Database
 connectDB();
@@ -13,4 +16,4 @@ app.use(express.json());
 
 route(app);
 
-app.listen(1904);
+app.listen(process.env.PORT);
