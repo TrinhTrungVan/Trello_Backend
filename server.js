@@ -14,6 +14,10 @@ app.use(cors());
 app.use(express.urlencoded());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+    res.send("TrungVan");
+});
+
 route(app);
 
 app.listen(process.env.PORT);
