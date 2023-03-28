@@ -3,6 +3,7 @@ import TodoList from "../models/todoListModel.js";
 
 export const getAllTodos = async (req, res) => {
     const todos = await Todo.find({});
+    console.log("Todos", todos[0]);
     res.json(todos);
 };
 
