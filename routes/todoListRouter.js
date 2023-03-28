@@ -1,9 +1,8 @@
 import express from "express";
-import { getAllTodoLists, getSingleTodoList, createTodoList, deleteTodoList, updateTodoList, updateDataList } from "../controllers/TodoListController.js";
+import { getAllTodoLists, getSingleTodoList, createTodoList, deleteTodoList, updateTodoList } from "../controllers/TodoListController.js";
 
 const todoListRouter = express.Router();
 
-todoListRouter.put("/update", updateDataList);
 todoListRouter.delete("/:id", deleteTodoList);
 todoListRouter.put("/:id", updateTodoList);
 todoListRouter.post("/create", createTodoList);

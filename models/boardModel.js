@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const boardSchema = new mongoose.Schema({
-    data: Array,
+    data: [{ type: String, ref: "todo_list" }],
 });
 
 const Board = mongoose.model("board", boardSchema);
